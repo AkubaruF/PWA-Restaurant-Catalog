@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #feece2;
+}
+
+.skip-link {
+  text-decoration: none;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background-color: #e2bfb3;
+  color: white;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+img {
+  display: block;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  margin: 20px 20px 20px 20px;
+}
+
+/* .movie { */
+/* display: flex; */
+/* } */
+
+.movie__poster {
+  object-fit: contain;
+  /* height: 100%;
+  width: 100%; */
+}
+
+.head_bar {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e2bfb3;
+  color: white;
+  flex: auto;
+}
+
+.head_bar .white_space {
+  flex: 1 1 40%;
+}
+
+.head_bar div {
+  flex: 1 1 15%;
+}
+
+.head_bar div a {
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+}
+
+.head_bar div a:hover {
+  color: #e2bfb3;
+  background-color: #feece2;
+}
+
+.head_bar_minimized {
+  padding: 12px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #e2bfb3;
+  color: white;
+  flex: auto;
+}
+
+#navigationDrawer {
+  width: 250px;
+  height: 100%;
+  position: absolute;
+
+  transform: translate(-250px, 0);
+  transition: transform 0.3s ease-in-out;
+  background-color: #feece2;
+}
+
+#navigationDrawer ul li {
+  padding: 12px;
+}
+
+#navigationDrawer ul li a {
+  color: #e2bfb3;
+  text-decoration: none;
+  padding: 12px;
+}
+
+#navigationDrawer.open {
+  transform: translate(0, 0)
+}
+
+#hamburgerButton {
+  display: none;
+  padding: 12px;
+  align-items: center;
+  justify-content: center;
+  background-color: #e2bfb3;
+  color: white;
+  flex: auto;
+}
+
+.jumbotron {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1;
+}
+
+.jumbotron img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border: 1px solid #e2bfb3;
+}
+
+.daftarrestoran {
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.daftarrestoran>h2 {
+  text-align: center;
+  color: #e2bfb3;
+}
+
+.restaurant {
+  padding: 8px 16px 16px 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px 10px;
+  max-width: 270px;
+}
+
+.restaurant img {
+  object-fit: cover;
+  height: 50%;
+  width: 100%;
+}
+
+figure img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.restaurant p {
+  text-align: justify;
+  padding-bottom: 20px;
+}
+
+.restaurant_list {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.foodAndBeverageContainer {
+  display: flex;
+  border-style: solid;
+  margin: 20px 20px 20px 20px;
+}
+
+.foodContainer {
+  flex: 1 1 50%;
+  border-style: solid;
+  text-align: center;
+}
+
+.foodTitle {
+  border-style: hidden hidden solid hidden;
+}
+
+footer {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e2bfb3;
+  color: white;
+  flex: auto;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.content {
+  display: flex;
+  margin: 20px 20px 20px 20px;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+article h3 a {
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+article p {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .jumbotron img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #hamburgerButton {
+    display: flex;
+  }
+
+  .head_bar {
+    display: none;
+  }
+
+  .head_bar_minimized {
+    display: flex;
+  }
+
+  .jumbotron img {
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 20px 20px;
+  }
+
+  article img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .restaurant_list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
